@@ -1,0 +1,113 @@
+.seccion-contacto {
+  padding: 80px 20px;
+  background-color: #f4f7f9;
+  transition: background-color 0.3s ease;
+}
+
+.contenedor {
+  max-width: 800px; 
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #212121;
+  transition: color 0.3s ease;
+}
+
+.linea-decorativa {
+  width: 60px;
+  height: 4px;
+  background-color: #1976d2;
+  margin: 0 auto 50px;
+}
+
+.formulario-contenedor {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: background-color 0.3s ease;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.campo-full {
+  width: 100%;
+}
+
+.btn-enviar {
+  padding: 25px 0;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+:host-context(.dark-theme) {
+  .seccion-contacto {
+    background-color: #121212;
+  }
+  
+  .titulo-seccion {
+    color: #ffffff;
+  }
+
+  .linea-decorativa {
+    background-color: #ffb74d;
+  }
+
+  .formulario-contenedor {
+    background: #1e1e1e; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  ::ng-deep {
+    .mat-mdc-input-element, textarea.mat-mdc-input-element {
+      color: #ffffff !important;
+    }
+
+    .mdc-floating-label, .mat-mdc-form-field-label {
+      color: #b0bec5 !important;
+    }
+
+    .mdc-notched-outline__leading,
+    .mdc-notched-outline__notch,
+    .mdc-notched-outline__trailing {
+      border-color: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .mat-mdc-form-field:hover .mdc-notched-outline__leading,
+    .mat-mdc-form-field:hover .mdc-notched-outline__notch,
+    .mat-mdc-form-field:hover .mdc-notched-outline__trailing {
+      border-color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .mat-mdc-form-field.mat-focused {
+      .mdc-notched-outline__leading,
+      .mdc-notched-outline__notch,
+      .mdc-notched-outline__trailing {
+        border-color: #ffb74d !important;
+      }
+      .mdc-floating-label {
+        color: #ffb74d !important;
+      }
+    }
+  }
+
+  .btn-enviar:disabled {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  .btn-enviar:not(:disabled) {
+    background-color: #ffb74d !important;
+    color: #121212 !important; 
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,54 @@
+<section class="seccion-proyectos">
+  <div class="contenedor">
+    <h2 class="titulo-seccion">{{ 'NAV.PROJECTS' | translate }}</h2>
+    <div class="linea-decorativa"></div>
+
+    <div class="filtros-contenedor">
+      <button
+        *ngFor="let tech of tecnologias"
+        mat-stroked-button
+        [color]="filtroActivo() === tech ? 'primary' : ''"
+        [class.activo]="filtroActivo() === tech"
+        (click)="setFiltro(tech)"
+        class="btn-filtro">
+        {{ tech === 'ALL' ? ('PROJECTS.FILTER_ALL' | translate) : tech }}
+      </button>
+    </div>
+
+    <div class="grid-proyectos">
+      <mat-card
+        class="proyecto-card"
+        *ngFor="let p of (proyectos$ | async) | filterByTech: filtroActivo()">
+
+        <img mat-card-image [src]="p.imagen" alt="Foto de {{ p.titulo }}"
+          onerror="this.src='https://via.placeholder.com/400x200'">
+
+        <mat-card-header>
+          <mat-card-title>{{ p.titulo }}</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <p class="descripcion-proyecto">{{ p.desc | translate }}</p>
+
+          <mat-chip-set>
+            <mat-chip *ngFor="let t of p.tech">{{ t }}</mat-chip>
+          </mat-chip-set>
+        </mat-card-content>
+
+        <mat-card-actions align="end">
+          <a mat-button color="primary" [href]="p.github" target="_blank">
+            {{ 'PROJECTS.GITHUB_BTN' | translate }}
+          </a>
+          <a mat-raised-button color="primary" [href]="p.demo" target="_blank">
+            {{ 'PROJECTS.DEMO_BTN' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <p class="sin-resultados" *ngIf="((proyectos$ | async) | filterByTech: filtroActivo())?.length === 0">
+      {{ 'PROJECTS.NO_RESULTS' | translate }}
+    </p>
+
+  </div>
+</section>

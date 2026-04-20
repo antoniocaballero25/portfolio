@@ -1,0 +1,52 @@
+<mat-toolbar color="primary" class="header-toolbar">
+
+  <div class="logo-section">
+    <a routerLink="/" class="portfolio-title">{{ 'PORTAFOLIO' | translate }}</a>
+  </div>
+
+  <div class="nav-links">
+    <button mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+      {{ 'NAV.HOME' | translate }}
+    </button>
+    <button mat-button routerLink="/sobre-mi" routerLinkActive="active-link">
+      {{ 'NAV.ABOUT' | translate }}
+    </button>
+    <button mat-button routerLink="/habilidades" routerLinkActive="active-link">
+      {{ 'NAV.SKILLS' | translate }}
+    </button>
+    <button mat-button routerLink="/proyectos" routerLinkActive="active-link">
+      {{ 'NAV.PROJECTS' | translate }}
+    </button>
+    <button mat-button routerLink="/contacto" routerLinkActive="active-link">
+      {{ 'NAV.CONTACT' | translate }}
+    </button>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="controls">
+    <button mat-icon-button (click)="themeService.toggleTheme()" class="theme-toggle" title="Cambiar tema">
+      <mat-icon>{{ themeService.darkModeSignal() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="menu" class="lang-btn">
+      {{ 'NAV.LANG_SELECT' | translate }} <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+  </div>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="changeLanguage('es')">
+      <img src="assets/espana.png" class="bandera-icon" alt="ES">
+      <span>Español</span>
+    </button>
+    <button mat-menu-item (click)="changeLanguage('en')">
+      <img src="assets/reino-unido.png" class="bandera-icon" alt="EN">
+      <span>English</span>
+    </button>
+    <button mat-menu-item (click)="changeLanguage('de')">
+      <img src="assets/alemania.png" class="bandera-icon" alt="DE">
+      <span>Deutsch</span>
+    </button>
+  </mat-menu>
+
+</mat-toolbar>

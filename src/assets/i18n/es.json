@@ -1,0 +1,56 @@
+{
+  "PORTAFOLIO": "Portafolio",
+  "NAV": {
+    "HOME": "Inicio",
+    "ABOUT": "Sobre mí",
+    "SKILLS": "Habilidades",
+    "PROJECTS": "Proyectos",
+    "EXPERIENCE": "Currículum",
+    "LANG_SELECT": "Idioma",
+    "CONTACT": "Contacto"
+  },
+  "HERO": {
+    "GREETING": "¡Hola! Mi nombre es",
+    "ROLE": "Desarrollador Full Stack",
+    "DESCRIPTION": "Soy un apasionado de la tecnología especializado en construir aplicaciones web modernas, rápidas y escalables utilizando Angular y Spring Boot.",
+    "VIEW_PROJECTS": "Ver mis proyectos",
+    "DOWNLOAD_CV": "Descargar CV"
+  },
+  "ABOUT": {
+    "TITLE": "Sobre mí",
+    "DESCRIPTION": "Soy un desarrollador en formación, actualmente aprendiendo Angular.",
+    "LOCATION_LABEL": "Localización",
+    "LOCATION_VALUE": "Mérida, España",
+    "SPECIALTY_LABEL": "Especialidad",
+    "SPECIALTY_VALUE": "Desarrollo Multiplataforma",
+    "INTERESTS_LABEL": "Intereses",
+    "INTERESTS_VALUE": "Angular, Java, UI/UX"
+  },
+  "SKILLS": {
+    "LEVEL": {
+      "BASIC": "Básico",
+      "INTERMEDIATE": "Intermedio",
+      "ADVANCED": "Avanzado"
+    },
+    "NAME": {
+      "DATABASES": "SQL / Bases de Datos"
+    }
+  },
+  "CONTACT": {
+    "NAME": "Tu Nombre",
+    "EMAIL": "Tu Correo Electrónico",
+    "MESSAGE": "Mensaje",
+    "SEND": "Enviar Mensaje",
+    "ERROR_REQUIRED": "Este campo es obligatorio",
+    "ERROR_EMAIL": "Por favor, introduce un correo válido"
+  },
+  "PROJECTS": {
+    "GESTI_DAM_DESC": "Aplicación de gestión de inventario realizada en Java Swing y MySQL.",
+    "WEATHER_DESC": "Consulta el clima en tiempo real usando la API de OpenWeather.",
+    "GITHUB_BTN": "GitHub",
+    "DEMO_BTN": "Ver Demo",
+    "FILTER_ALL": "Todos",
+    "NO_RESULTS": "No hay proyectos con esa tecnología."
+  },
+  "FOOTER": { "RIGHTS": "Todos los derechos reservados" }
+}

@@ -1,0 +1,43 @@
+<section class="seccion-contacto">
+  <div class="contenedor">
+    <h2 class="titulo-seccion">{{ 'NAV.CONTACT' | translate }}</h2>
+    <div class="linea-decorativa"></div>
+
+    <div class="formulario-contenedor">
+      <form [formGroup]="contactForm" (ngSubmit)="enviarMensaje()" class="formulario">
+        
+        <mat-form-field appearance="outline" class="campo-full">
+          <mat-label>{{ 'CONTACT.NAME' | translate }}</mat-label>
+          <input matInput formControlName="nombre" placeholder="Ej: Juan Pérez">
+          <mat-error *ngIf="contactForm.get('nombre')?.hasError('required')">
+            {{ 'CONTACT.ERROR_REQUIRED' | translate }}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="campo-full">
+          <mat-label>{{ 'CONTACT.EMAIL' | translate }}</mat-label>
+          <input matInput type="email" formControlName="email" placeholder="ejemplo@correo.com">
+          <mat-error *ngIf="contactForm.get('email')?.hasError('required')">
+            {{ 'CONTACT.ERROR_REQUIRED' | translate }}
+          </mat-error>
+          <mat-error *ngIf="contactForm.get('email')?.hasError('email')">
+            {{ 'CONTACT.ERROR_EMAIL' | translate }}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="campo-full">
+          <mat-label>{{ 'CONTACT.MESSAGE' | translate }}</mat-label>
+          <textarea matInput formControlName="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+          <mat-error *ngIf="contactForm.get('mensaje')?.hasError('required')">
+            {{ 'CONTACT.ERROR_REQUIRED' | translate }}
+          </mat-error>
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" type="submit" class="btn-enviar" [disabled]="contactForm.invalid || isSending()">
+          {{ isSending() ? 'Enviando...' : ('CONTACT.SEND' | translate) }}
+        </button>
+
+      </form>
+    </div>
+  </div>
+</section>

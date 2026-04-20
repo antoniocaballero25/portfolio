@@ -1,0 +1,159 @@
+.seccion-proyectos {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #212121;
+  transition: color 0.3s ease;
+}
+
+.linea-decorativa {
+  width: 60px;
+  height: 4px;
+  background-color: #1976d2;
+  margin: 0 auto 40px;
+  transition: background-color 0.3s ease;
+}
+
+.filtros-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.btn-filtro {
+  border-radius: 20px !important;
+  transition: all 0.3s ease;
+  
+  &.activo {
+    border-color: #1976d2 !important; 
+    color: #1976d2 !important; 
+    background-color: rgba(25, 118, 210, 0.08) !important; 
+  }
+}
+
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.proyecto-card {
+  text-align: left;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  }
+
+  img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  mat-card-content {
+    flex-grow: 1;
+    margin-top: 15px;
+  }
+
+  .descripcion-proyecto {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #546e7a;
+    transition: color 0.3s ease;
+  }
+
+  mat-chip-set {
+    margin-bottom: 10px;
+  }
+
+  mat-chip {
+    background-color: rgba(25, 118, 210, 0.1) !important; 
+    border: 1px solid rgba(25, 118, 210, 0.3) !important; 
+    color: #1976d2 !important; 
+    font-weight: 600 !important;
+
+    ::ng-deep .mdc-evolution-chip__text-label,
+    ::ng-deep .mat-mdc-chip-action-label,
+    ::ng-deep span {
+      color: #1976d2 !important;
+    }
+  }
+}
+
+.sin-resultados {
+  margin-top: 50px;
+  font-size: 1.2rem;
+  color: #78909c;
+  font-style: italic;
+}
+
+:host-context(.dark-theme) {
+  .seccion-proyectos {
+    background-color: #121212;
+  }
+  
+  .titulo-seccion {
+    color: #ffffff;
+  }
+
+  .linea-decorativa {
+    background-color: #ffb74d; 
+  }
+
+  .btn-filtro {
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
+    
+    &.activo {
+      border-color: #ffb74d !important;
+      color: #ffb74d !important;
+      background-color: rgba(255, 183, 77, 0.1) !important;
+    }
+  }
+
+  .proyecto-card {
+    background-color: #1e1e1e;
+    
+    mat-card-title {
+      color: #ffffff;
+    }
+
+    .descripcion-proyecto {
+      color: #b0bec5;
+    }
+    mat-chip {
+      background-color: rgba(255, 183, 77, 0.12) !important; 
+      border: 1px solid rgba(255, 183, 77, 0.4) !important; 
+      color: #ffb74d !important;
+      font-weight: 600 !important;
+
+      ::ng-deep .mdc-evolution-chip__text-label,
+      ::ng-deep .mat-mdc-chip-action-label,
+      ::ng-deep span {
+        color: #ffb74d !important;
+      }
+    }
+  }
+
+  .sin-resultados {
+    color: #b0bec5;
+  }
+}

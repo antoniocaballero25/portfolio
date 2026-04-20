@@ -1,0 +1,18 @@
+<section class="seccion-skills">
+  <div class="contenedor">
+    <h2 class="titulo-seccion">{{ 'NAV.SKILLS' | translate }}</h2>
+    <div class="linea-decorativa"></div>
+
+    <div class="grid-skills">
+      <mat-card class="skill-card" *ngFor="let skill of habilidades$ | async">
+        <mat-card-header>
+          <div mat-card-avatar class="icono-contenedor">
+            <mat-icon color="primary">{{ skill.icono }}</mat-icon>
+          </div>
+          <mat-card-title>{{ skill.nombre | translate }}</mat-card-title>
+          <mat-card-subtitle>{{ skill.nivel | translate }}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+<section class="hero-section">
+  <div class="contenedor hero-grid">
+    
+    <div class="hero-texto">
+      <span class="saludo">{{ 'HERO.GREETING' | translate }}</span>
+      <h1 class="nombre">Antonio Caballero Gatlan</h1> <h2 class="rol">{{ 'HERO.ROLE' | translate }}</h2>
+      
+      <p class="descripcion">
+        {{ 'HERO.DESCRIPTION' | translate }}
+      </p>
+
+      <div class="botones-contenedor">
+        <button mat-flat-button color="primary" class="btn-principal" routerLink="/proyectos">
+          {{ 'HERO.VIEW_PROJECTS' | translate }}
+        </button>
+        
+        <a>
+          {{ 'HERO.DOWNLOAD_CV' | translate }}
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-imagen">
+        <img src="assets/fotoTraje.png" alt="Profile" onerror="this.src='https://via.placeholder.com/400'">
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,56 @@
+{
+  "PORTAFOLIO": "Portfolio",
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About me",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "EXPERIENCE": "Resume",
+    "LANG_SELECT": "Language",
+    "CONTACT": "Contact"
+  },
+  "HERO": {
+    "GREETING": "Hi! My name is",
+    "ROLE": "Full Stack Developer",
+    "DESCRIPTION": "I am a technology enthusiast specialized in building modern, fast, and scalable web applications using Angular and Spring Boot.",
+    "VIEW_PROJECTS": "View my projects",
+    "DOWNLOAD_CV": "Download CV"
+  },
+  "ABOUT": {
+    "TITLE": "About me",
+    "DESCRIPTION": "I am a developer in training, currently learning Angular.",
+    "LOCATION_LABEL": "Location",
+    "LOCATION_VALUE": "Mérida, Spain",
+    "SPECIALTY_LABEL": "Specialty",
+    "SPECIALTY_VALUE": "Cross-Platform Development",
+    "INTERESTS_LABEL": "Interests",
+    "INTERESTS_VALUE": "Angular, Java, UI/UX"
+  },
+  "SKILLS": {
+    "LEVEL": {
+      "BASIC": "Basic",
+      "INTERMEDIATE": "Intermediate",
+      "ADVANCED": "Advanced"
+    },
+    "NAME": {
+      "DATABASES": "SQL / Databases"
+    }
+  },
+  "CONTACT": {
+    "NAME": "Your Name",
+    "EMAIL": "Your Email",
+    "MESSAGE": "Message",
+    "SEND": "Send Message",
+    "ERROR_REQUIRED": "This field is required",
+    "ERROR_EMAIL": "Please enter a valid email address"
+  },
+  "PROJECTS": {
+    "GESTI_DAM_DESC": "Inventory management application built with Java Swing and MySQL.",
+    "WEATHER_DESC": "Check the weather in real time using the OpenWeather API.",
+    "GITHUB_BTN": "GitHub",
+    "DEMO_BTN": "View Demo",
+    "FILTER_ALL": "All",
+    "NO_RESULTS": "No projects found with that technology."
+  },
+  "FOOTER": { "RIGHTS": "All rights reserved" }
+}
