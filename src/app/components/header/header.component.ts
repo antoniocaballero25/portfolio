@@ -29,11 +29,4 @@ export class HeaderComponent {
     this.translate.use(lang);
     localStorage.setItem('lang', lang);
   }
-
-  scrollTo(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
 }

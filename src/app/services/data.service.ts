@@ -19,7 +19,7 @@ export class DataService {
     ];
     return of(habilidades).pipe(delay(500));
   }
-
+  // Simulación de una base de datos 
   getProjects(): Observable<Proyecto[]> {
     const proyectos: Proyecto[] = [
       {

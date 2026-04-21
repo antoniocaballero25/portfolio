@@ -7,7 +7,6 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json()); 
 
-// NUESTRA RUTA SECRETA
 app.post('/api/contacto', (req, res) => {
     const datos = req.body;
 
@@ -21,7 +20,7 @@ app.post('/api/contacto', (req, res) => {
     }, 1500);
 });
 
-// ENCENDER EL SERVIDOR
+// Encender el servidor
 app.listen(PORT, () => {
     console.log(`Servidor backend en http://localhost:${PORT}`);
 });

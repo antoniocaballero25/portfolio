@@ -19,7 +19,7 @@ export class ContactService {
   
   private http = inject(HttpClient);
   private apiUrl = 'http://localhost:3000/api/contacto'; 
-
+  
   enviarCorreo(datos: DatosContacto): Observable<RespuestaServidor> {
     
     return this.http.post<RespuestaServidor>(this.apiUrl, datos);
