@@ -2,7 +2,7 @@
   min-height: calc(100vh - 64px);
   display: flex;
   align-items: center;
-  background-color: #ffffff;
+  background-color: transparent; 
   transition: background-color 0.3s ease;
   padding: 40px 20px;
 }
@@ -34,15 +34,17 @@
   text-transform: uppercase;
   display: block;
   margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
 
 .nombre {
   font-size: 4.5rem; 
   font-weight: 800;
-  color: #212121;
+  color: var(--text-color); 
   margin: 0;
   line-height: 1.1; 
   margin-bottom: 15px;
+  transition: color 0.3s ease;
 
   @media (max-width: 600px) {
     font-size: 3rem;
@@ -51,17 +53,21 @@
 
 .rol {
   font-size: 2.2rem;
-  color: #546e7a;
+  color: var(--text-color); 
+  opacity: 0.9; 
   margin-bottom: 25px;
   font-weight: 400;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .descripcion {
   font-size: 1.15rem;
   line-height: 1.7;
-  color: #607d8b;
+  color: var(--text-color); 
+  opacity: 0.75; 
   max-width: 550px;
   margin-bottom: 40px;
+  transition: color 0.3s ease, opacity 0.3s ease;
   @media (max-width: 900px) { margin: 0 auto 40px auto; }
 }
 
@@ -90,13 +96,14 @@
   .circulo-decorativo {
     width: 450px;
     height: 450px;
-    background-color: rgba(25, 118, 210, 0.05);
+    background-color: rgba(25, 118, 210, 0.05); 
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     border: 2px dashed rgba(25, 118, 210, 0.2);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 
     @media (max-width: 1100px) {
         width: 350px;
@@ -112,15 +119,11 @@
   }
 }
 
-:host-context(.dark-theme) {
-  .hero-section { background-color: #121212; }
-  .saludo { color: #ffb74d; }
-  .nombre { color: #ffffff; }
-  .rol { color: #e0e0e0; }
-  .descripcion { color: #b0bec5; }
+:host-context(body.dark-theme) {
+  .saludo { color: #ffb74d; } 
   
   .hero-imagen .circulo-decorativo {
-    background-color: rgba(255, 183, 77, 0.05);
+    background-color: rgba(255, 183, 77, 0.05); 
     border-color: rgba(255, 183, 77, 0.2);
   }
 

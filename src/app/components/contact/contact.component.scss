@@ -1,6 +1,6 @@
 .seccion-contacto {
   padding: 80px 20px;
-  background-color: #f4f7f9;
+  background-color: transparent;
   transition: background-color 0.3s ease;
 }
 
@@ -13,7 +13,7 @@
 .titulo-seccion {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #212121;
+  color: var(--text-color);
   transition: color 0.3s ease;
 }
 
@@ -22,6 +22,7 @@
   height: 4px;
   background-color: #1976d2;
   margin: 0 auto 50px;
+  transition: background-color 0.3s ease;
 }
 
 .formulario-contenedor {
@@ -29,7 +30,7 @@
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .formulario {
@@ -49,21 +50,14 @@
   transition: all 0.3s ease;
 }
 
-:host-context(.dark-theme) {
-  .seccion-contacto {
-    background-color: #121212;
-  }
+:host-context(body.dark-theme) {
   
-  .titulo-seccion {
-    color: #ffffff;
-  }
-
   .linea-decorativa {
     background-color: #ffb74d;
   }
 
   .formulario-contenedor {
-    background: #1e1e1e; 
+    background: #1e2024; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   }
 

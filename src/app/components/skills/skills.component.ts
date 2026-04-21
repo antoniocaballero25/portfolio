@@ -5,6 +5,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { DataService } from '../../services/data.service';
 import { Observable } from 'rxjs';
+import { Skill } from '../../models/skill.model';
+
 
 @Component({
   selector: 'app-skills',
@@ -16,9 +18,9 @@ import { Observable } from 'rxjs';
 export class SkillsComponent implements OnInit {
   private dataService = inject(DataService);
   
-  habilidades$!: Observable<any[]>;
+  habilidades$!: Observable<Skill[]>;
 
   ngOnInit() {
-    this.habilidades$ = this.dataService.getSkills();
+    this.habilidades$ = this.dataService.getSkills() as Observable<Skill[]>;
   }
 }

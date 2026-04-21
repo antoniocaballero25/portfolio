@@ -1,6 +1,6 @@
 .footer {
   padding: 40px 20px;
-  background-color: #f8f9fa;
+  background-color: rgba(0, 0, 0, 0.04);
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   margin-top: auto; 
@@ -20,12 +20,15 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0;
-  color: #212121;
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
 .footer-tagline {
-  color: #546e7a;
+  color: var(--text-color);
+  opacity: 0.8;
   margin: 5px 0 0;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .footer-links {
@@ -46,21 +49,15 @@
 
 .footer-copyright {
   font-size: 0.9rem;
-  color: #90a4ae;
+  color: var(--text-color);
+  opacity: 0.6;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
-:host-context(.dark-theme) {
+:host-context(body.dark-theme) {
   .footer {
-    background-color: #1a1a1a;
+    background-color: #1e2024;
     border-top-color: rgba(255, 255, 255, 0.05);
-  }
-
-  .footer-nombre {
-    color: #ffffff;
-  }
-
-  .footer-tagline {
-    color: #b0bec5;
   }
 
   .footer-links a {
